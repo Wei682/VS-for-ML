@@ -1,0 +1,299 @@
+* {
+    /* border-top: 10px solid #1098ad ; */
+    /* the universal selector */
+    margin:0;
+    padding:0;
+  } 
+  
+  /* page section */
+  body {
+    color: #444;
+    font-family: sans-serif;
+  
+    border-top: 10px solid #1098ad;
+    /*border-top won't be inherited to every child */
+    position: relative;
+  }
+  /* the inheritance has the lowest priority, easy to be overrided*/
+  
+  .container {
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+  }
+  
+  .main-header {
+    background-color: #f7f7f7;
+    padding:20px 20px;
+    margin-bottom: 30px;
+    /* height: 60px; */
+  }
+
+  nav {
+    padding: 0px 5px;
+    font-size: 15px;
+  }
+
+    /* smaller elements */
+    h1, h2{
+      color: #1098ad;
+    }
+    
+    h1 {
+      font-size: 26px;
+      text-transform: uppercase;
+      font-style: italic;
+    }
+
+    h2 {
+        padding: 0px 20px;
+        font-size: 26px;
+      }
+
+    /* Styling links */
+a:link {
+    color: #1098ad;
+    text-decoration: none; /*get rid of the underlines */
+  }
+  
+  a:visited {
+    color: #1098ad;
+  }
+  
+  a:hover {
+    color: #3C2317;
+    font-weight: bold;
+    text-decoration: underline dotted #3C2317
+    d;
+  }
+
+    nav a:link {
+
+        margin-right: 30px;
+        margin-top: 10px;
+        display: inline-block;
+      } 
+      
+      nav a:link:last-child {
+        margin-right: 0;
+      }
+  
+      img {
+        border-radius: 8px;
+        max-width: 80%;
+        height: auto;
+        padding: 15px 20px;
+      }
+
+      html, body, img, figure {
+        max-width: 100%;
+    }
+    button, .btn {
+        -webkit-transition: background-color 250ms cubic-bezier(0.55, 0, 0.1, 1);
+        transition: background-color 250ms cubic-bezier(0.55, 0, 0.1, 1);
+    }
+    .slick-slide img {
+        display: block;
+    }
+    .text-left {
+        text-align: left !important;
+    }
+    .list-inline, .list-unstyled {
+        padding-left: 0;
+        list-style: none;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    ol, ul {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    .map__section .container {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    .u-padding-bottom-40 {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+    .map {
+        position: relative;
+        width: 800px;
+        -webkit-transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1);
+        transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1);
+        margin-top: 15px;
+    }
+    .city.place1 {
+        top: 0%;
+        left: 0%;
+    }
+    .popup {
+        background: #F5EFE6;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        color: #1098ad;
+        padding: 40px 40px 20px;
+        overflow: hidden;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transform-origin: 12%;
+        -ms-transform-origin: 12%;
+        transform-origin: 12%;
+        opacity: 0;
+        -webkit-transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1);
+        transition: all 250ms cubic-bezier(0.55, 0, 0.1, 1);
+    }
+    .popup > .popup__inner, .popup > .inner {
+        display: table-cell;
+        width: 100%;
+        vertical-align: middle;
+    }
+    .popup__name {
+        font-family: 'Oswald', sans-serif;
+        font-size: 48px;
+        text-transform: uppercase;
+        padding-bottom: 14px;
+        display: block;
+    }
+    .popup__content {
+        font-size: 16px;
+        font-family: 'Helvetica', sans-serif;
+    }
+    .city {
+        position: absolute;
+        width: 234px;
+        height: 234px;
+    }
+    .city__button .close {
+        display: none;
+    }
+    .city.active .city__button .close {
+        display: block;
+    }
+    .city.active .city__button .plus, .city.active .city__button .city__name {
+        display: none;
+    }
+    .plus, .close {
+      max-width: 35%;
+      height: auto;
+    }
+    .city {
+        position: absolute;
+        width: 334px;
+        height: 334px;
+    }
+    .city__button {
+        background: none;
+        border: none;
+        z-index: 30;
+        position: absolute;
+        top: -15px;
+        left: -25px;
+        outline: none;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 537px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .map__section .container .section-header {
+        padding-bottom: 10px;
+    }
+    .content .section-header {
+        margin-top: 0;
+        padding-top: 83px;
+        letter-spacing: 0.35px;
+    }
+    .section-header {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 900;
+        color: #101f1d;
+        font-size: 35px;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 45px;
+        letter-spacing: 1.25px;
+        margin-bottom: 5px;
+    }
+    .content .section-header small {
+        margin-bottom: -4px;
+        padding-top: 12px;
+        letter-spacing: 0px;
+    }
+    .section-header small {
+        color: #303030;
+        font-size: 22px;
+        display: block;
+        font-weight: 600;
+        padding-top: 10px;
+        margin-bottom: -12px;
+        text-transform: none;
+    }
+    .city.active {
+      z-index: 30;
+    }
+    .city.active .popup {
+        opacity: 1;
+        display: inline-table;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      position: relative;
+        z-index: 20;
+    }
+    .btn {
+        font-size: 15px;
+        padding: 22px 46px 18px;
+        line-height: 1;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 0;
+        position: relative;
+        letter-spacing: 0.3px;
+    }
+    
+    @media (min-width: 1299px) {
+      .map__image {
+        max-width: none;
+        width: 800px;
+        margin-top: -3px;
+        position: relative;
+        left: 0px;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
+      .content .btn {
+        margin-top: 55px;
+      }
+      .section-header {
+        padding-top: 77px;
+      }
+      .map__section .container {
+        padding-bottom: 71px;
+      }
+    }
+    @media only screen and (min-width: 768px){
+      .popup__content {
+        position: relative;
+        text-align: center;
+        letter-spacing: 0.15px;
+        line-height: 1.25;
+      }
+      .city__name {
+        font-size: 18px;
+      }
+    }
+
+    .city.place1 {
+      top: 53.24%;
+      left: 21.94%;
+  }
