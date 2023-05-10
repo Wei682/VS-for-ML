@@ -6,8 +6,6 @@
     <title>Visual Place Recognition Visualization</title>
   </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <body>
 
     <div class = "container">
@@ -23,48 +21,11 @@
 
 	<h2>Select a spot: </h2>
   
-  <div class="container" >
-    <div class="row u-padding-bottom-40" >
-       <div class="col-lg-6 col-lg-push-6 col-md-7 col-md-push-5" >
-          <div class="map" >
-             <img alt="Map" class="map__image" src="map.png"/>
-             <div class="city place1" >
-                <button class="city__button" type="button" tabindex="0" ><img alt="Map Open Icon" class="plus" src="https://www.solodev.com/assets/map/map-plus.png"  data-pin-nopin="true"><img alt="Map Close Icon" class="close" src="https://www.solodev.com/assets/map/map-close.png" data-pin-nopin="true" ></button>
-                <div class="popup" >
-                   <div class="inner" >
-                      <p class="popup__content" >
-                         <a class = "visualization" href="img1.html">View Visualization</a>
-                      </p>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </div>
- 
- <script>
- $(document).ready(function() {
-       var city, map;
-       map = $('.map');
-       city = map.find('.city');
-       city.each(function() {
-         var button, that;
-         that = $(this);
-         button = that.find('.city__button');
-         return button.on('click', function() {
-           city.not(that).removeClass('active');
-           if (that.hasClass('active')) {
-             that.removeClass('active');
-             return map.removeClass('popup-open');
-           } else {
-             that.addClass('active');
-             return map.addClass('popup-open');
-           }
-         });
-       });
- });
- </script>
+
+<img alt="Map" class="map" src="map.png"/>
+      <a class = "place1" href="place1.html">&#9679</a>
+      <a class = "place2" href="place2.html">&#10003</a>
+      <a class = "place3" href="place3.html">&#10008</a>
 
   </body>
 </html>
