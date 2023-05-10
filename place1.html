@@ -1,76 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
-    <title>Visualization for img1</title>
-  </head>
 
-<h2> Original Image</h1>
-  <div class="row">
-    <br>
-  <p>Image</p>
+<head>
+  <meta charset="UTF-8" />
+  <link href="visualization.css" rel="stylesheet" />
+  <title>Visual Place Recognition Visualization</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<body>
+  <img class = "network" src="network_arc.png" alt="network">
+
   <br>
-</div>
+  <br>
+
+  <!-- <h1>Query Image</h1>
+  <div class = "row">
+  <img src="img_1.jpeg" alt=""> </img>
+</div> -->
+
 <br>
 
-<h2> Resnet</h2>
-<br>
-
-<div class="row">
-  <div class="column">
-    <h3>Resnet last layer visualization</h3>
-    <br>
-    <p>Image</p>
+  <h1> Visualization for Resnet</h1>
+  <div class='flex-container'>
+    <div class='flex-column'>
+      <img src="img_1.jpeg" alt="query_image" id="frame1">
+    </div>
   </div>
-  <div class="column">
-    <h3>Netvlad last layer visualization</h3>
     <br>
-    <p>Image</p>
+  <div class="button">
+        <button id="option0">Query Image</button>
+        <button id="option1">SSRL last layer visualization</button>
+        <button id="option2">NetVLAD last layer visualization</button>
+        <button id="option3">Matched Image (Output)</button>
   </div>
-  <div class="column">
-    <h3>Top Match Result</h3>
-    <br>
-    <p>Image</p>
+  <br>
+
+
+<h1> Visualization for Transformer</h1>
+  <div class='flex-container'>
+    <div class='flex-column'>
+      <img src="img_1.jpeg" alt="query_image" id="frame2">
+    </div>
   </div>
-</div>
-
-<br>
-<br>
-
-<h2> Transformer</h2>
-<br>
-
-<div class="row">
-  <div class="column">
-    <h3>Transformer last layer visualization</h3>
     <br>
-    <p>Image</p>
+  <div class="button">
+        <button id="option4">Query Image</button>
+        <button id="option5">SSRL last layer visualization</button>
+        <button id="option6">NetVLAD last layer visualization</button>
+        <button id="option7">Matched Image (Output)</button>
   </div>
-  <div class="column">
-    <h3>Netvlad last layer visualization</h3>
-    <br>
-    <p>Image</p>
+  <br>
+
+  <h1> Locations on map</h1>
+  <div class = "row">
+  <img alt="Map" class="map" src="map.png"/>
+    <p class = "Query_place">&#9873;</p>
+    <p class = "Resnet_place">&#9679</p>
+    <p class = "Transformer_place">&#9733;</p>
   </div>
-  <div class="column">
-    <h3>Top Match Result</h3>
-    <br>
-    <p>Image</p>
-</div>
-</div>
 
+  <div class = "label">
+      <p class = "Query_label">Query image location: &#9873;</p>
+      <p class = "Resnet_label">Resnet output location: &#9679</p>
+      <p class = "Transformer_label">Transformer output location: &#9733;</p>
+  </div>
+
+  <br>
+  <br>
+  <a class = "back"  href="index.html">Go back to home</a>
 <br>
 <br>
 
-<h2> Map</h2>
-<div class="row">
-<img alt="Map" class="map" src="map.png"/>
+</body>
 
-</div>
+<script>
+  document.getElementById("option0").addEventListener("mouseover", function () {
+    document.getElementById("frame1").src = "img_1.jpeg";
+  });
+  document.getElementById("option1").addEventListener("mouseover", function () {
+    document.getElementById("frame1").src = "img_2.jpg";
+  });
+  document.getElementById("option2").addEventListener("mouseover", function () {
+    document.getElementById("frame1").src = "img_2.jpg";
+  });
+  document.getElementById("option3").addEventListener("mouseover", function () {
+    document.getElementById("frame1").src = "img_1.jpeg";
+  });
+  document.getElementById("option0").addEventListener("mouseout", function () {
+    document.getElementById("frame1").src = "img_1.jpeg";
+  });
+  document.getElementById("option1").addEventListener("mouseout", function () {
+    document.getElementById("frame1").src = "img_1.jpeg";
+  });
+  document.getElementById("option2").addEventListener("mouseout", function () {
+    document.getElementById("frame1").src = "img_1.jpeg";
+  });
+  document.getElementById("option3").addEventListener("mouseout", function () {
+    document.getElementById("frame1").src = "img_1.jpeg";
+  });
 
-<br>
-<a class = "back" href="index.html">Go back</a>
+  document.getElementById("option4").addEventListener("mouseover", function () {
+    document.getElementById("frame2").src = "img_1.jpeg";
+  });
+  document.getElementById("option5").addEventListener("mouseover", function () {
+    document.getElementById("frame2").src = "img_2.jpg";
+  });
+  document.getElementById("option6").addEventListener("mouseover", function () {
+    document.getElementById("frame2").src = "img_2.jpg";
+  });
+  document.getElementById("option7").addEventListener("mouseover", function () {
+    document.getElementById("frame2").src = "img_1.jpeg";
+  });
+  document.getElementById("option4").addEventListener("mouseout", function () {
+    document.getElementById("frame2").src = "img_1.jpeg";
+  });
+  document.getElementById("option5").addEventListener("mouseout", function () {
+    document.getElementById("frame2").src = "img_1.jpeg";
+  });
+  document.getElementById("option6").addEventListener("mouseout", function () {
+    document.getElementById("frame2").src = "img_1.jpeg";
+  });
+  document.getElementById("option7").addEventListener("mouseout", function () {
+    document.getElementById("frame2").src = "img_1.jpeg";
+  });
+</script>
 
-<br>
-  </body>
 </html>

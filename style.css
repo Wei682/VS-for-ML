@@ -1,5 +1,4 @@
 * {
-    /* border-top: 10px solid #1098ad ; */
     /* the universal selector */
     margin:0;
     padding:0;
@@ -9,25 +8,58 @@
   body {
     color: #444;
     font-family: sans-serif;
-  
-    border-top: 10px solid #1098ad;
+    background: url("citylarge.gif") no-repeat top center fixed;
+    background-size: 100vw;
+    border-top: 10px solid #BD8E62;
     /*border-top won't be inherited to every child */
     position: relative;
   }
   /* the inheritance has the lowest priority, easy to be overrided*/
   
+  .content{
+    background: gray;
+  }
+
   .container {
     /* margin-left: auto;
     margin-right: auto; */
+    display: flex;
     margin: 0 auto;
+    flex-direction: column;
+    justify-direction: center;
+    align-items: center;
   }
   
   .main-header {
-    background-color: #f7f7f7;
-    padding:20px 20px;
-    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 400px;
+    margin-bottom: 300px;
     /* height: 60px; */
   }
+
+  .main-header .header-content{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header-content h1{
+    color: black;
+  }
+  .intro {
+    display: flex;
+    width: 50vw;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+  }  
 
   nav {
     padding: 0px 5px;
@@ -36,7 +68,7 @@
 
     /* smaller elements */
     h1, h2, h3{
-      color: #1098ad;
+      color: #A46843;
     }
     
     h1 {
@@ -57,12 +89,12 @@
 
 /* Styling links */
 a:link {
-    color: #1098ad;
+    color: #A46843;
     text-decoration: none; /*get rid of the underlines */
   }
   
   a:visited {
-    color: #1098ad;
+    color: #A46843;
   }
   
   a:hover {
@@ -98,52 +130,52 @@ a:link {
   .place1 {
     font-size: 50px;
     position: absolute;
-    top: 500px;
-    left: 100px;
+    top: 1500px;
+    left: 311px;
   }
 
   .place2 {
     font-size: 50px;
     position: absolute;
-    top: 200px;
+    top: 1200px;
     left: 500px;
   }
 
   .place3 {
     font-size: 50px;
     position: absolute;
-    top: 560px;
-    left: 120px;
+    top: 1120px;
+    left: 450px;
   }
 
   a.place1:link, a.place1:visited {
-    color:rgb(214, 146, 10);
+    color:rgb(214, 166, 10);
   }
 
   a.place1:hover {
-    color: rgb(143, 99, 11);
+    color: rgb(152, 118, 6);
     font-weight: bold;
     text-decoration: underline dotted #3C2317
     d;
   }
 
   a.place2:link, a.place2:visited {
-    color:rgb(18, 143, 66);
+    color:#40686A;
   }
 
   a.place2:hover {
-    color: rgb(9, 66, 31);
+    color: #1d3a3b;
     font-weight: bold;
     text-decoration: underline dotted #3C2317
     d;
   }
 
   a.place3:link, a.place3:visited {
-    color:rgb(224, 34, 21);
+    color:#c44f3a;
   }
 
   a.place3:hover {
-    color: rgb(157, 18, 9);
+    color: #743320;
     font-weight: bold;
     text-decoration: underline dotted #3C2317
     d;
