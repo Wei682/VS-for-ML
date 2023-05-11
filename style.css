@@ -148,6 +148,20 @@ a:link {
     left: 400px;
   }
 
+  .place4 {
+    font-size: 35px;
+    position: absolute;
+    top: 1372px;
+    left: 430px;
+  }
+
+  .place5 {
+    font-size: 35px;
+    position: absolute;
+    top: 1470px;
+    left: 420px;
+  }
+
   a.place1:link, a.place1:visited, a.place3:link, a.place3:visited {
     color:#40686A;
   }
@@ -168,29 +182,27 @@ a:link {
     d;
   }
 
-  a.place2:link, a.place2:visited {
+  a.place2:link, a.place2:visited, a.place5:link, a.place5:visited{
     color:rgb(214, 143, 10);
   }
 
-  a.place2:hover {
+  a.place2:hover, a.place5:hover {
     color: rgb(181, 120, 7);
     font-weight: bold;
     text-decoration: underline dotted #3C2317
     d;
   }
 
-  /* 
-
-  a.place3:link, a.place3:visited {
+  a.place4:link, a.place4:visited {
     color:#c44f3a;
   }
 
-  a.place3:hover {
+  a.place4:hover {
     color: #743320;
     font-weight: bold;
     text-decoration: underline dotted #3C2317
     d;
-  } */
+  }
 
 .wrapper {
     margin: 0 auto;
