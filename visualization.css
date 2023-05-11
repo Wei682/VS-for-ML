@@ -61,6 +61,36 @@ button {
   margin-top: 15px;
   }
 
+  .Query_place1{
+    background-color: transparent;
+    color: red;
+    opacity: 70%;
+    font-size: 50px;
+    position: absolute;
+    top: 1555px;
+    left: 417px;
+  }
+
+  .Resnet_place1{
+    background-color: transparent;
+    color: blue;
+    opacity: 70%;
+    font-size: 50px;
+    position: absolute;
+    top: 1555px;
+    left: 417px;
+  }
+
+  .Sim_place1{
+    background-color: transparent;
+    color: green;
+    opacity: 80%;
+    font-size: 32px;
+    position: absolute;
+    top: 1553px;
+    left: 420px;
+  }
+
   .Query_place2{
     background-color: transparent;
     color: red;
