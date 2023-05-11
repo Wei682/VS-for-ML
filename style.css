@@ -141,7 +141,23 @@ a:link {
     left: 393px;
   }
 
-  a.place1:link, a.place1:visited {
+  .place3 {
+    font-size: 35px;
+    position: absolute;
+    top: 1516px;
+    left: 400px;
+  }
+
+  a.place1:link, a.place1:visited, a.place3:link, a.place3:visited {
+    color:#40686A;
+  }
+
+  a.place1:hover, a.place3:hover {
+    color: #1d3a3b;
+    font-weight: bold;
+    text-decoration: underline dotted #3C2317
+    d;
+  } {
     color:#40686A;
   }
 
@@ -163,28 +179,7 @@ a:link {
     d;
   }
 
-  /* a.place1:link, a.place1:visited {
-    color:rgb(214, 166, 10);
-  }
-
-  a.place1:hover {
-    color: rgb(152, 118, 6);
-    font-weight: bold;
-    text-decoration: underline dotted #3C2317
-    d;
-  }
-
-
-  a.place2:link, a.place2:visited {
-    color:#40686A;
-  }
-
-  a.place2:hover {
-    color: #1d3a3b;
-    font-weight: bold;
-    text-decoration: underline dotted #3C2317
-    d;
-  }
+  /* 
 
   a.place3:link, a.place3:visited {
     color:#c44f3a;

@@ -91,6 +91,37 @@ button {
     left: 410px;
   }
 
+
+  .Query_place3{
+    background-color: transparent;
+    color: red;
+    opacity: 70%;
+    font-size: 50px;
+    position: absolute;
+    top: 1620px;
+    left: 405px;
+  }
+
+  .Resnet_place3{
+    background-color: transparent;
+    color: blue;
+    opacity: 70%;
+    font-size: 50px;
+    position: absolute;
+    top: 1620px;
+    left: 404.5px;
+  }
+
+  .Sim_place3{
+    background-color: transparent;
+    color: green;
+    opacity: 80%;
+    font-size: 32px;
+    position: absolute;
+    top: 1630px;
+    left: 410px;
+  }
+
   .Query_label{
     background-color: transparent;
     color: red;

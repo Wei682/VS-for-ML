@@ -33,7 +33,7 @@
   <h1> Visualization for Resnet</h1>
   <div class='flex-container'>
     <div class='flex-column'>
-      <img src="query2.jpg" alt="query_image" id="frame1">
+      <img src="query3.jpg" alt="query_image" id="frame1">
     </div>
   </div>
     <br>
@@ -47,7 +47,7 @@
 <h1> Visualization for SimCLR</h1>
   <div class='flex-container'>
     <div class='flex-column'>
-      <img src="query2.jpg" alt="query_image" id="frame2">
+      <img src="query3.jpg" alt="query_image" id="frame2">
     </div>
   </div>
     <br>
@@ -60,15 +60,15 @@
   <h1> Locations on map</h1>
   <div class = "row">
   <img alt="Map" class="map" src="map.png"/>
-    <p class = "Query_place2">&#9873;</p>
-    <p class = "Resnet_place2">&#9679</p>
-    <p class = "Sim_place2">&#9733;</p>
+    <p class = "Query_place3">&#9873;</p>
+    <p class = "Resnet_place3">&#9679</p>
+    <p class = "Sim_place3">&#9733;</p>
   </div>
 
   <div class = "label">
       <p class = "Query_label">Query image location: &#9873</p>
-      <p class = "Resnet_label">Resnet output location: &#9679  Distance error: 9.91m</p>
-      <p class = "Sim_label">SimCLR output location: &#9733  Distance error: 338.54m</p>
+      <p class = "Resnet_label">Resnet output location: &#9679  Distance error: 0.87m </p>
+      <p class = "Sim_label">SimCLR output location: &#9733  Distance error: 6.92m</p>
   </div>
 
   <br>
@@ -81,30 +81,30 @@
 
 <script>
   document.getElementById("option1").addEventListener("mouseover", function () {
-    document.getElementById("frame1").src = "resnet_vn2.jpg";
+    document.getElementById("frame1").src = "resnet_vn3.jpg";
   });
   document.getElementById("option2").addEventListener("mouseover", function () {
-    document.getElementById("frame1").src = "resnet2.jpg";
+    document.getElementById("frame1").src = "resnet3.jpg";
   });
   document.getElementById("option1").addEventListener("mouseout", function () {
-    document.getElementById("frame1").src = "query2.jpg";
+    document.getElementById("frame1").src = "query3.jpg";
   });
   document.getElementById("option2").addEventListener("mouseout", function () {
-    document.getElementById("frame1").src = "query2.jpg";
+    document.getElementById("frame1").src = "query3.jpg";
   });
 
 
   document.getElementById("option4").addEventListener("mouseover", function () {
-    document.getElementById("frame2").src = "simclr_vn2.jpg";
+    document.getElementById("frame2").src = "simclr_vn3.jpg";
   });
   document.getElementById("option5").addEventListener("mouseover", function () {
-    document.getElementById("frame2").src = "simclr2.jpg";
+    document.getElementById("frame2").src = "simclr3.jpg";
   });
   document.getElementById("option4").addEventListener("mouseout", function () {
-    document.getElementById("frame2").src = "query2.jpg";
+    document.getElementById("frame2").src = "query3.jpg";
   });
   document.getElementById("option5").addEventListener("mouseout", function () {
-    document.getElementById("frame2").src = "query2.jpg";
+    document.getElementById("frame2").src = "query3.jpg";
   });
 </script>
 
