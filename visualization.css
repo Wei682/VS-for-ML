@@ -61,34 +61,34 @@ button {
   margin-top: 15px;
   }
 
-  .Query_place{
+  .Query_place2{
     background-color: transparent;
     color: red;
     opacity: 70%;
     font-size: 50px;
     position: absolute;
-    top: 1500px;
-    left: 311px;
+    top: 1543px;
+    left: 395px;
   }
 
-  .Resnet_place{
+  .Resnet_place2{
     background-color: transparent;
     color: blue;
     opacity: 70%;
     font-size: 50px;
     position: absolute;
-    top: 1400px;
-    left: 300px;
+    top: 1543px;
+    left: 398px;
   }
 
-  .Transformer_place{
+  .Sim_place2{
     background-color: transparent;
     color: green;
     opacity: 80%;
     font-size: 32px;
     position: absolute;
-    top: 1402px;
-    left: 300px;
+    top: 1420px;
+    left: 410px;
   }
 
   .Query_label{
@@ -105,7 +105,7 @@ button {
     font-size: 20px;
   }
 
-  .Transformer_label{
+  .Sim_label{
     background-color: transparent;
     color: green;
     opacity: 80%;

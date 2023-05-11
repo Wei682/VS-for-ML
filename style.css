@@ -128,27 +128,42 @@ a:link {
     }
 
   .place1 {
-    font-size: 50px;
+    font-size: 35px;
     position: absolute;
-    top: 1500px;
-    left: 311px;
+    top: 1453px;
+    left: 415px;
   }
 
   .place2 {
-    font-size: 50px;
+    font-size: 35px;
     position: absolute;
-    top: 1200px;
-    left: 500px;
-  }
-
-  .place3 {
-    font-size: 50px;
-    position: absolute;
-    top: 1120px;
-    left: 450px;
+    top: 1440px;
+    left: 393px;
   }
 
   a.place1:link, a.place1:visited {
+    color:#40686A;
+  }
+
+  a.place1:hover {
+    color: #1d3a3b;
+    font-weight: bold;
+    text-decoration: underline dotted #3C2317
+    d;
+  }
+
+  a.place2:link, a.place2:visited {
+    color:rgb(214, 143, 10);
+  }
+
+  a.place2:hover {
+    color: rgb(181, 120, 7);
+    font-weight: bold;
+    text-decoration: underline dotted #3C2317
+    d;
+  }
+
+  /* a.place1:link, a.place1:visited {
     color:rgb(214, 166, 10);
   }
 
@@ -158,6 +173,7 @@ a:link {
     text-decoration: underline dotted #3C2317
     d;
   }
+
 
   a.place2:link, a.place2:visited {
     color:#40686A;
@@ -179,7 +195,7 @@ a:link {
     font-weight: bold;
     text-decoration: underline dotted #3C2317
     d;
-  }
+  } */
 
 .wrapper {
     margin: 0 auto;
