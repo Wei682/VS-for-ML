@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+
 <head>
   <meta charset="UTF-8" />
   <link href="style.css" rel="stylesheet" />
@@ -29,25 +33,82 @@
     <div style='display: flex; flex-direction: column; align-items: center;'>
 
       <div class='intro'>
-        In this project, we investigated the question of whether we can improve Visual Place Recognition (VPR) by using Self-supervised representation learning (SSRL). Recent studies on SSRL show very promising results that SSRL has the potential to improve all vision tasks through its exceptional ability to extract high-level image features. VPR is a task highly dependent on the quality of the extracted features. Therefore, we combined different SSRL methods with the NetVLAD layer to perform VPR. We benchmarked three SSRL methods, Masked Autoencoders(MAE), SimCLR, and Variational Autoencoder (VAE), against the CNN-based NetVLAD on NYU-VPR dataset. We visualize the result and found out that SSRL methods have a negative influence on the VPR performance, together with our explanations and in-depth analysis.
-      </div>
+        In this project, we investigated the question of whether we can improve Visual Place Recognition (VPR) by using Self-supervised representation learning (SSRL). Recent studies on SSRL show very promising results that SSRL has the potential to improve all vision tasks through its exceptional ability to extract high-level image features. VPR is a task highly dependent on the quality of the extracted features. Therefore, we combined different feature extraction methods with the NetVLAD layer to perform VPR. We benchmarked supervised and self-supervised methods: ResNet, Compact Convolutional Transformer, and SimCLR with the NetVLAD layer on NYU-VPR dataset. We visualize the result to explain the reason why SSRL methods have a negative influence on the VPR performance, together with our visualization, explanations and in-depth analysis.</div>
 
       
 	<h2>Select a spot: </h2>
   
-
-  <img alt="Map" class="map" src="map.png"/>
-        <a class = "place1" href="place1.html">&#10003</a>
-        <a class = "place2" href="place2.html">&#9679</a>
-        <a class = "place3" href="place3.html">&#10003</a>
-        <a class = "place4" href="place4.html">&#10008</a>
-        <a class = "place5" href="place4.html">&#9679</a>
-        <!-- <a class = "place1" href="place1.html">&#9679</a>
-        <a class = "place2" href="place2.html">&#10003</a>
-        <a class = "place3" href="place3.html">&#10008</a> -->
+  <div id="map"></div>
   
-  <br>
+<script> 
+var map = L.map('map').setView([40.73,-74.00], 17);
+
+const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var check = L.icon({
+    iconUrl: 'checkmark.png',
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var question = L.icon({
+    iconUrl: 'question.png',
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var cross = L.icon({
+    iconUrl: "cross.png",
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var marker1 = L.marker([40.730461,-74.002235], {icon:check}).addTo(map);
+function marker1Click(e) {
+  window.location.href = "place1.html";
+}
+marker1.on('click', marker1Click);
+
+var marker2 = L.marker([40.730621, -74.002824], {icon:question}).addTo(map);
+function marker2Click(e) {
+  window.location.href = "place2.html";
+}
+marker2.on('click', marker2Click);
+
+var marker3 = L.marker([40.73143, -73.99439], {icon:check}).addTo(map);
+function marker3Click(e) {
+  window.location.href = "place3.html";
+}
+marker3.on('click', marker3Click);
+
+var marker4 = L.marker([40.732311, -74.001675], {icon:cross}).addTo(map);
+function marker4Click(e) {
+  window.location.href = "place4.html";
+}
+marker4.on('click', marker4Click);
+
+var marker5 = L.marker([40.729891, -74.002129], {icon:question}).addTo(map);
+function marker5Click(e) {
+  window.location.href = "place5.html";
+}
+marker5.on('click', marker5Click);
+
+var marker6 = L.marker([40.727683, -73.994852], {icon:question}).addTo(map);
+function marker6Click(e) {
+  window.location.href = "place6.html";
+}
+marker6.on('click', marker6Click);
+
+
+</script>
     </body>
+
 
     </div>
   </div>

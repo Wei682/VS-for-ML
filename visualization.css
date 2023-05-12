@@ -180,4 +180,11 @@ button {
   .back{
     padding: 10px;
   }
+
+#map {
+  height: 400px; 
+  width: 600px;
+  position: relative;
+  outline: none;
+}
  

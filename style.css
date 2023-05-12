@@ -131,7 +131,7 @@ a:link {
     font-size: 35px;
     position: absolute;
     top: 1453px;
-    left: 415px;
+    left: 980px;
   }
 
   .place2 {
@@ -229,4 +229,11 @@ a:link {
 
 .back{
   padding: 0px 20px;
+}
+
+#map {
+  height: 400px; 
+  width: 600px;
+  position: relative;
+  outline: none;
 }
