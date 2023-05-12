@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+
 <head>
   <meta charset="UTF-8" />
   <link href="visualization.css" rel="stylesheet" />
@@ -58,19 +62,15 @@
   <br>
 
   <h1> Locations on map</h1>
-  <div class = "row">
-  <img alt="Map" class="map" src="map.png"/>
-    <p class = "Query_place2">&#9873;</p>
-    <p class = "Resnet_place2">&#9679</p>
-    <p class = "Sim_place2">&#9733;</p>
-  </div>
+  
 
   <div class = "label">
       <p class = "Query_label">Query image location: &#9873</p>
       <p class = "Resnet_label">Resnet output location: &#9679  Distance error: 9.91m</p>
       <p class = "Sim_label">SimCLR output location: &#9733  Distance error: 338.54m</p>
   </div>
-
+  <div style='display: flex; flex-direction: column; align-items: center;'>
+  <div id="map"></div>
   <br>
   <br>
   <a class = "back"  href="index.html">Go back to home</a>
@@ -106,6 +106,41 @@
   document.getElementById("option5").addEventListener("mouseout", function () {
     document.getElementById("frame2").src = "query2.jpg";
   });
+
+var map = L.map('map').setView([40.73,-74.00], 15);
+
+const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var flag = L.icon({
+    iconUrl: 'flag1.png',
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var circle = L.icon({
+    iconUrl: 'circle.png',
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var star = L.icon({
+    iconUrl: 'star.png',
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var marker1 = L.marker([40.730621,  -74.002824], {icon:flag}).addTo(map);
+
+
+var marker2 = L.marker([40.730623, -74.002706], {icon:circle}).addTo(map);
+
+var marker3 = L.marker([40.733635, -74.002219], {icon:star}).addTo(map);
 </script>
 
 </html>

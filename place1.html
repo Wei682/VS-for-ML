@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+
 <head>
   <meta charset="UTF-8" />
   <link href="visualization.css" rel="stylesheet" />
@@ -58,12 +62,6 @@
   <br>
 
   <h1> Locations on map</h1>
-  <div class = "row">
-  <img alt="Map" class="map" src="map.png"/>
-    <p class = "Query_place1">&#9873;</p>
-    <p class = "Resnet_place1">&#9679</p>
-    <p class = "Sim_place1">&#9733;</p>
-  </div>
 
   <div class = "label">
       <p class = "Query_label">Query image location: &#9873 </p>
@@ -73,6 +71,8 @@
 
   <br>
   <br>
+ <div style='display: flex; flex-direction: column; align-items: center;'>
+  <div id="map"></div>
   <a class = "back"  href="index.html">Go back to home</a>
 <br>
 <br>
@@ -106,6 +106,48 @@
   document.getElementById("option5").addEventListener("mouseout", function () {
     document.getElementById("frame2").src = "query1.jpg";
   });
+
+
+var map = L.map('map').setView([40.73,-74.00], 17);
+
+const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var flag = L.icon({
+    iconUrl: 'flag1.png',
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var circle = L.icon({
+    iconUrl: 'circle.png',
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var star = L.icon({
+    iconUrl: 'star.png',
+    iconSize: [38, 38],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+});
+
+var marker1 = L.marker([40.730461, -74.002235], {icon:flag}).addTo(map);
+
+
+var marker2 = L.marker([40.730461, -74.002234], {icon:circle}).addTo(map);
+
+var marker3 = L.marker([40.730478, -74.002187], {icon:star}).addTo(map);
+
+
+
+
+
+
 </script>
 
 </html>
